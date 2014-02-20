@@ -1,10 +1,19 @@
 class CategoriesController < ApplicationController
+  before_action :find_product
   before_action :set_category, only: [:show, :edit, :update, :destroy]
-
+  
   # GET /categories
   # GET /categories.json
   def index
-    @categories = Category.all
+    @categories = @product ? @product.categories : Category.all
+  end
+
+  private
+  
+  def find_product
+    if params[:product_id].present?
+      @product = Product.find(params[:product_id])
+    end
   end
 
   # GET /categories/1

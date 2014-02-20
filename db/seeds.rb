@@ -18,7 +18,7 @@ def set_up_development_database
       {
         company: Faker::Company.name,
         website: Faker::Internet.uri('http'), 
-        upc: Faker::Identification.drivers_license,
+        upc: "ABC #{i}"
         name: Faker::BaconIpsum.words.join(' '),
         price: rand(5..278),
         description: Faker::BaconIpsum.paragraph,
