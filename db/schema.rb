@@ -51,7 +51,7 @@ ActiveRecord::Schema.define(version: 20140220192924) do
     t.integer  "product_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "accounts_id"
+    t.integer  "account_id"
   end
 
   create_table "products", force: true do |t|
