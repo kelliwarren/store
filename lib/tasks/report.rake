@@ -6,7 +6,8 @@ namespace :report do
       count = model.count
       puts "We have #{count} #{model.name.downcase.pluralize}" 
     else
-      puts "Must assign a model with MODEL=something" 
+      puts "Must assign a model with MODEL=something"
+    end 
   end
 end
 
